@@ -1,0 +1,8 @@
+name = Administrator Services
+description = Caters to administrators.
+package = Custom Modules
+core = 7.x
+files[] = admin.module
+
+dependencies[] = simpletest
+files[] = admin.test
