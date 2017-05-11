@@ -1,20 +1,16 @@
 <?php
 
-class CalculateBooksTestCase extends DrupalUnitTestCase
-{
-    public static function getInfo()
-    {
-
+class CalculateBooksTestCase extends DrupalUnitTestCase {
+    public static function getInfo() {
         return array(
-        'name' => 'My Book Calculator unit tests',
-        'description' => 'Make sure Book Calculator works prperly.',
-        'group' => 'My Book Calculator unit tests',
+            'name' => 'My Book Calculator unit tests',
+            'description' => 'Make sure Book Calculator works prperly.',
+            'group' => 'My Book Calculator unit tests',
         );
 
     }
 
-    function testBookPrice()
-    {
+    function testBookPrice() {
         $description = "This will output a sum of " . 42 . ".";
 
         $input = 20;
