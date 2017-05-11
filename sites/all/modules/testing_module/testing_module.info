@@ -1,0 +1,7 @@
+name = Testing Module
+Description = A module that displays simple testing
+core = 7.x
+package = Custom Module
+files[] = testing_module.module
+files[] = testing_module.test
+dependencies[] = simpletest

@@ -1,0 +1,58 @@
+<?php
+function testing_module_menu() {
+    $items['sum'] = array(
+        'title' => 'Calculate Your Books',
+        'page callback' => 'drupal_get_form',
+        'page arguments' => array('sum_form'),
+        'access callback' => TRUE,
+        'type' => MENU_NORMAL_ITEM,
+    );
+    $items['sum_success_page'] = array(
+        'title' => 'Your Total Amount for Really Expensive Books',
+        'page callback' => 'sum_success',
+        'access callback' => TRUE,
+        'type' => MENU_CALLBACK
+    );
+    return $items;
+}
+
+function sum_form() {
+    $form['first_book'] = array(
+        '#title' => 'First Book',
+        '#type' => 'textfield',
+        '#description' => t('Please enter the price of your first book.'),
+        '#required' => TRUE,
+    );
+
+    $form['second_book'] = array(
+        '#title' => 'Second Book',
+        '#type' => 'textfield',
+        '#description' => t('Please enter the price of your first book.'),
+        '#required' => TRUE,
+    );
+
+    $form['submit'] = array(
+        '#type' => 'submit',
+        '#value' => 'Calculate Cost',
+    );
+
+    return $form;
+}
+
+function sum_form_submit($form, &$form_state) {
+
+    $first_book = $form_state['values']['first_book'];
+    $second_book = $form_state['values']['second_book'];
+    $sum = getSum($first_book, $second_book);
+    $_SESSION['final_sum'] = $sum;
+    $form_state['redirect'] = 'sum_success_page';
+}
+
+function sum_success() {
+    $answer = $_SESSION['final_sum'];
+    return '<p> Your final cost is: ' . $answer . '</p>';
+}
+
+function getSum($first_book, $second_book){
+    return $first_book + $second_book;
+}

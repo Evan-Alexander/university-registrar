@@ -1,0 +1,28 @@
+<?php
+
+class CalculateBooksTestCase extends DrupalUnitTestCase
+{
+    public static function getInfo()
+    {
+
+        return array(
+        'name' => 'My Book Calculator unit tests',
+        'description' => 'Make sure Book Calculator works prperly.',
+        'group' => 'My Book Calculator unit tests',
+        );
+
+    }
+
+    function testBookPrice()
+    {
+        $description = "This will output a sum of " . 42 . ".";
+
+        $input = 20;
+        $input2 = 22;
+
+        $result = getSum($input, $input2);
+
+
+        $this->assertTrue("This will output a sum of " . 42 . ".", $result);
+    }
+}
