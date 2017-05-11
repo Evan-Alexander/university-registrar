@@ -1,0 +1,5 @@
+name = Ajax Article Loader
+description = Display Articles with Ajax.
+package = Custom Modules
+core = 7.x
+files[] = ajax.module
