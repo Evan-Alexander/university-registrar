@@ -3,9 +3,13 @@
 A university website that lists courses, instructors, and students.
 
 This project features:
-* A Roman Numeral encoder for students to try out.  This custom module will have been tested via functional and unit testing.
+* A custom testing_module that includes:
+* A simple Book Price calculator for students to add up the price of their books.  
+* A Unit Test for said calculator.
 
-* A view that has been enabled with AJAX.
+* An article viewer that has been enabled with AJAX.  These articles provide students with help and hints during their life as a university student.
+
+* A list of courses offered at this tiny university with the associated teachers, subjects, course names, and rooms they are held in.
 
 
 
@@ -51,7 +55,7 @@ You will need the following things properly installed on your computer.
 
 * After importing the .sql.zip file, select the "Privileges" tab and click on "Add User".
 
-* Select username and password.  "jp-project" for username and password for all
+* Select username and password.  "jp-project" for dbname, username, and password for all
 
 * After importing the database, if you have any trouble logging in with your Site Maintenance account, clear your browser's cookies by clearing the browser history.
 
